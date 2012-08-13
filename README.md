@@ -58,7 +58,7 @@ prefix - string 可选
 
 
 
-something else
+关于模块引用
 ------------------
 
 在使用`CMD`模块时 ， 需要保证页面中已经引入了`seajs` [seajs](http://seajs.org)
@@ -90,3 +90,12 @@ var s = store.createStorage('localStorage')
 
 如果浏览器不支持`localStorage` 或 `sessionStorage` 也将返回 `false`
 
+
+
+关于非模块引用
+------------------
+
+
+`<script src="path/store.original.js"></script>`
+
+`<script>var s = store('localStorage') </script>`
