@@ -70,24 +70,20 @@
         storeName = name,
         win = window
         
-    storeName == 'localStorage' || (storeName = 'sessionStorage')
-
     _isSupport = function(){
       return !!(storeName in win && win[storeName])
     } 
 
+  /**
+  * isSupportLS - boolean
+  * 返回 boolean
+  * 检查客户端是否支持localStorage
+  */
+  store.isSupport = _isSupport()
 
-
-    if(_isSupport){
+    if(store.isSupport){
 
       var s = win[storeName]
-
-      /**
-      * isSupportLS - boolean
-      * 返回 boolean
-      * 检查客户端是否支持localStorage
-      */
-      store.isSupport = _isSupport
     
       /**
       * key - string
