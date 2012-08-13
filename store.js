@@ -71,13 +71,14 @@
         win = window
         
     _isSupport = function(){
+      if(!(storeName == 'localStorage' || storeName == 'sessionStorage')) return false
       return !!(storeName in win && win[storeName])
     } 
 
   /**
-  * isSupportLS - boolean
+  * isSupport - boolean
   * 返回 boolean
-  * 检查客户端是否支持localStorage
+  * 检查客户端是否支持存储
   */
   store.isSupport = _isSupport()
 
